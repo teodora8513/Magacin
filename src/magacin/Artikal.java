@@ -30,6 +30,29 @@ public  class Artikal {
 	public int getKolicina() {
 		return kolicina;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + sifra;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Artikal))
+			return false;
+		Artikal other = (Artikal) obj;
+		if (sifra != other.sifra)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Artikal [naziv=" + naziv + ", sifra=" + sifra + ", opis=" + opis + ", kolicina=" + kolicina + "]";
+	}
 	
 	
 	

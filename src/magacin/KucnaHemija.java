@@ -19,5 +19,9 @@ public class KucnaHemija extends Artikal{
 		return rokTrajanja;
 	}
 
-	
+	@Override
+	public String toString() {
+		
+		return super.toString() + " Rok trajanja je: " + getRokTrajanja() ;
+	}
 }
