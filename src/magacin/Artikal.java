@@ -15,11 +15,15 @@ public  class Artikal {
 		this.kolicina = kolicina;
 	}
 
-	public String getNaziv() {
+	public String getNaziv() throws Exception {
+		if(naziv==null)
+			throw new Exception("Artikal nije imenovan");
 		return naziv;
 	}
 
-	public int getSifra() {
+	public int getSifra() throws Exception {
+		if(sifra==0)
+			throw new Exception("Artikal ne postoji");
 		return sifra;
 	}
 
