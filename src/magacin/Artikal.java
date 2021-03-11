@@ -5,7 +5,7 @@ public  class Artikal {
 	private final String naziv;
 	private final int sifra;
 	private final String opis;
-	private final int kolicina;
+	private  int kolicina;
 	
 	public Artikal(String naziv, int sifra, String opis, int kolicina) {
 		super();
@@ -15,6 +15,9 @@ public  class Artikal {
 		this.kolicina = kolicina;
 	}
 
+	public void setKolicina(int broj) {
+		kolicina  = broj;
+	}
 	public String getNaziv() throws Exception {
 		if(naziv==null)
 			throw new Exception("Artikal nije imenovan");

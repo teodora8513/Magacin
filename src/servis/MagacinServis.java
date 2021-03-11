@@ -1,32 +1,56 @@
 package servis;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import interfejs.IMagacin;
 import magacin.Artikal;
 
 public class MagacinServis implements IMagacin {
 
+	private List<Artikal> artikli = new LinkedList<>();
+	private static int index =0;
+	
 	@Override
 	public void dodajArtikal(Artikal artikal) {
-		// TODO Auto-generated method stub
+		artikli.add(index++, artikal);
 		
 	}
 
 	@Override
 	public void dodajArtikalKolicinu(int sifra, int kol) {
-		// TODO Auto-generated method stub
+		for (Artikal artikal : artikli) {
+			try {
+				if(artikal.getSifra()==sifra)
+					artikal.setKolicina(kol);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		
 	}
 
 	@Override
-	public Artikal izbaciArtikal() {
-		// TODO Auto-generated method stub
-		return null;
+	public Artikal izbaciArtikal(int sifra) {
+		return artikli.remove(0);
 	}
 
 	@Override
 	public void pronadji(int sifra) {
-		// TODO Auto-generated method stub
+	for (int i = 0; i < artikli.size(); i++) {
+		try {
+			if(artikli.get(i).getSifra()==sifra) {
+				System.out.println(artikli.get(i).toString());
+				return;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
+		
+	}
 	}
 
 }
