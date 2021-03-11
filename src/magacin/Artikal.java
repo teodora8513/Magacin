@@ -15,22 +15,13 @@ public  class Artikal {
 		this.kolicina = kolicina;
 	}
 
-<<<<<<< HEAD
+
 	public void setKolicina(int broj) {
 		kolicina  = broj;
 	}
-=======
-	
->>>>>>> refs/heads/implementacijainterfejsa
-	public String getNaziv() throws Exception {
-		if(naziv==null)
-			throw new Exception("Artikal nije imenovan");
-		return naziv;
-	}
 
-	public void setKolicina(int broj) {
-		kolicina = broj;
-	}
+
+	
 	public int getSifra() throws Exception {
 		if(sifra==0)
 			throw new Exception("Artikal ne postoji");

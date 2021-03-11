@@ -13,7 +13,7 @@ import magacin.Magacin;
 
 public class MagacinServis implements IMagacin {
 
-
+	//Klasa
 	
 	
 
